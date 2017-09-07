@@ -10,7 +10,16 @@ const getters = {
   all: state => state.all
 }
 
-const actions = RestApiActions.get(Config.api + '/api/cars', {includes: 'user'})
+const actions = RestApiActions.get(Config.api + '/api/cars', {
+  reader: function(response) {
+    return response.data
+  },
+  params: {
+    fill: {
+      includes: 'user'
+    }
+  }
+})
 const mutations = EventMutations.get()
 
 export default {
