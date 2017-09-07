@@ -1,5 +1,5 @@
 export default {
-  api: 'http://laravel-vuex-php-example.dev',
+  api: 'http://127.0.0.1:8000',
   pusher: {
     key: 'YOUR_PUSHER_KEY_HERE'
   }
